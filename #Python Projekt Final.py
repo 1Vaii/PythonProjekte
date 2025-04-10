@@ -3,6 +3,14 @@ import random
 import time
 import sys
 
+def healpot():
+    healpod = prompt("Möchtest du einen Heiltrank benutzen? [0] Ja [1] Nein:\n", 0, 1)
+    if healpod == 0:
+        player[0]["lp"] = itemlist[0]["heal"]
+        print(player[0]["lp"])
+    else:
+        print("Ok! Dann nicht")
+
 #function for printing out text slowly to simulate someone typing the text out
 def print_slow(str):
     for letter in str:
@@ -163,6 +171,8 @@ Dir ist aber bewusst, dass etwas Schlimmes passiert ist, deswegen bündelst du d
 Zu deinem großen Glück siehst du ein/e {player[0]["weapon"]} zu deiner linken liegen und hebst es auf.
 Es fühlt sich vertraut an und liegt gut in der Hand.
 Vor dir erstreckt sich ein langer Gang, der von Fackeln an den Wänden erleuchtet wird. Dann läufst du los…\n""")
+
+healpot()
 
 #Player´s first decision
 while user_is_playing:
