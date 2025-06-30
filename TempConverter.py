@@ -40,7 +40,7 @@ def converter_selection(select):
                 temp = float(input("Please input a temp in Fahrenheit: "))
                 return fahrenheit_kelvin(temp)
             case 7:
-                print("Goodbye!")
+                print("Exiting Program...")
                 exit()
             case _:
                 return "Invalid input"
